@@ -1,0 +1,4 @@
+127.0.0.1  localhost
+127.0.1.1  jump.f5trn.com             jump
+10.10.1.61  www.nginxtraining.com     nginxtraining
+10.10.1.61  nginx.f5trn.com           nginx
