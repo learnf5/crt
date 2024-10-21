@@ -32,6 +32,9 @@ until sudo scp /tmp/nginx-repo.* nginx:/etc/ssl/nginx/ || (( count++ > 5 )); do 
 curl --silent --output /tmp/$LAB_ID.sh https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/$LAB_ID.sh
 bash -x /tmp/$LAB_ID.sh
 
+# Create caching lab directories 
+sudo ssh nginx mkdir --parents /data/nginx/cache
+
 # restart NGINX
 sudo ssh nginx systemctl stop nginx
 sudo ssh nginx systemctl start nginx
