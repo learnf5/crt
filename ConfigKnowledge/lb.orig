@@ -1,0 +1,10 @@
+server {
+    listen 80 default_server;
+    server_name localhost;
+    root /home/ubuntu/public_html;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+    }
+} 
