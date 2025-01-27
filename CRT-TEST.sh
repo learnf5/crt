@@ -16,7 +16,8 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/juice.conf    nginx:/etc/nginx/conf.d/juice.conf
 
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/ssl_params.conf
-sudo scp /tmp/ssl_params.conf    student:/etc/nginx/ssl/ssl_params.conf
+sudo ssh nginx mkdir --parents /etc/nginx/ssl
+#sudo scp /tmp/ssl_params.conf    student:/etc/nginx/ssl/ssl_params.conf
 
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/{curl,create_certs}.sh
 sudo ssh nginx mkdir --parents /home/student/ssl
