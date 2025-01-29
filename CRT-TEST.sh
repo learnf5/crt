@@ -12,12 +12,13 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/lb.orig    nginx:/etc/nginx/conf.d/lb.orig
 
 # For ConfigDemonstrate Lab (Exam 3)
+sudo ssh nginx mkdir --parents /etc/nginx/ssl
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/juice.conf
 sudo scp /tmp/juice.conf    nginx:/etc/nginx/conf.d/juice.conf
 
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/ssl_params.conf
 sudo ssh nginx mkdir --parents /etc/nginx/ssl-configs
-sudo scp /tmp/ssl_params.conf    nginx:/etc/nginx/ssl-configs/ssl_params.conf
+sudo scp /tmp/ssl_params.conf    nginx:/etc/nginx/ssl-configs/ssl-params.conf
 
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/{curl,create_certs}.sh
 sudo ssh nginx mkdir --parents /home/student/ssl
