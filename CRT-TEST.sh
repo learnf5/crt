@@ -32,7 +32,7 @@ sudo scp /tmp/hosts    nginx:/etc/hosts
 
 # For Troubleshooting Lab (Exam 4)
 sudo ssh nginx mkdir --parents /etc/nginx/ssl
-curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/juice.conf
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/Troubleshooting/juice.conf
 sudo scp /tmp/juice.conf    nginx:/etc/nginx/conf.d/juice.conf
 
 curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/Troubleshooting/ssl_params.conf
