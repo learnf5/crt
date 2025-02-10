@@ -1,4 +1,4 @@
-# crt
+# ngxcrt
 NGINX Certificate Management Prep Course Labs
 
 unlike other NGINX courses that each have their own github repo with folders Lab1, Lab2...
