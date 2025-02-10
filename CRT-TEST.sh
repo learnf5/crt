@@ -28,3 +28,16 @@ sudo ssh nginx chown -R student.student /home/student/ssl
 
 #Remove default.conf file since this lab requires only default.bak
 sudo ssh nginx mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.bak
+
+
+# For Troubleshooting Lab (Exam 4)
+sudo ssh nginx mkdir --parents /etc/nginx/ssl
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/juice.conf
+sudo scp /tmp/juice.conf    nginx:/etc/nginx/conf.d/juice.conf
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/Troubleshooting/ssl_params.conf
+sudo ssh nginx mkdir --parents /etc/nginx/ssl-configs
+sudo scp /tmp/ssl_params.conf    nginx:/etc/nginx/ssl-configs/ssl-params.conf
+
+curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/Troubleshooting/juice.tls
+sudo scp /tmp/juice.tls    nginx:/etc/nginx/conf.d/juice.tls
