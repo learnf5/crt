@@ -11,3 +11,6 @@ sudo scp /tmp/hosts    nginx:/etc/hosts
  curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigKnowledge/lb.orig
  sudo scp /tmp/lb.orig    nginx:/etc/nginx/conf.d/lb.orig
 
+ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigKnowledge/index.html
+ sudo scp /tmp/index.html    nginx:/home/ubuntu/public_html/index.html
+
