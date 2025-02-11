@@ -14,10 +14,11 @@ sudo scp /tmp/hosts    nginx:/etc/hosts
 
  curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/ssl_params.conf
  sudo ssh nginx mkdir --parents /etc/nginx/ssl-configs
- sudo scp /tmp/ssl_params.conf    nginx:/etc/nginx/ssl-configs/ssl-params.conf
 
  curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/crt/main/ConfigDemonstrate/{curl,create_certs}.sh
  sudo ssh nginx mkdir --parents /home/student/ssl
  sudo scp /tmp/{curl,create_certs}.sh    nginx:/home/student/ssl/
  sudo ssh nginx chmod +x /home/student/ssl/{create_certs,curl}.sh
  sudo ssh nginx chown -R student.student /home/student/ssl
+
+ sudo ssh nginx mv /etc/nginx/conf.d/default.{conf,bak}
