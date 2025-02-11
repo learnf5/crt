@@ -8,3 +8,4 @@ curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.
 sudo scp /tmp/hosts    nginx:/etc/hosts
 sudo cp /tmp/hosts /etc/hosts
 
+sudo ssh nginx rmdir /etc/nginx/ssl
